@@ -7054,6 +7054,7 @@
                     {
                       "listen": "test",
                       "script": {
+                        "id": "74cf9fba-56ca-48b6-ba69-aca57e40fdda",
                         "exec": [
                           "let jsonData = JSON.parse(responseBody);\r",
                           "\r",
@@ -7069,18 +7070,17 @@
                           "\r",
                           "pm.environment.set(\"stockReceiptRevision\",jsonData.sys.rev);"
                         ],
-                        "type": "text/javascript",
-                        "id": "74cf9fba-56ca-48b6-ba69-aca57e40fdda"
+                        "type": "text/javascript"
                       }
                     },
                     {
                       "listen": "prerequest",
                       "script": {
+                        "id": "1e641fd0-66cc-47cb-9431-c7c862c035e1",
                         "exec": [
                           ""
                         ],
-                        "type": "text/javascript",
-                        "id": "1e641fd0-66cc-47cb-9431-c7c862c035e1"
+                        "type": "text/javascript"
                       }
                     }
                   ],
@@ -7099,7 +7099,7 @@
                     "header": [],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n\t\"id\": \"{{stockReceiptID}}\",\r\n\t\"revision\": {{stockReceiptRevision}}\r\n}",
+                      "raw": "{\r\n\t\"id\": \"61dd21bb6d9412001b17b280\",\r\n\t\"revision\": \"1\"\r\n}",
                       "options": {
                         "raw": {
                           "language": "json"
