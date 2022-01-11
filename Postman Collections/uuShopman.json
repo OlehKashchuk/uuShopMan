@@ -5744,6 +5744,7 @@
                     {
                       "listen": "test",
                       "script": {
+                        "id": "73a42db8-c39b-4819-b992-17d54d90d37e",
                         "exec": [
                           "let jsonData = JSON.parse(responseBody);\r",
                           "\r",
@@ -5757,19 +5758,18 @@
                           "pm.environment.set(\"stockId\",jsonData.id);\r",
                           ""
                         ],
-                        "type": "text/javascript",
-                        "id": "73a42db8-c39b-4819-b992-17d54d90d37e"
+                        "type": "text/javascript"
                       }
                     },
                     {
                       "listen": "prerequest",
                       "script": {
+                        "id": "0fa4f9a2-de15-418a-aa31-8c5d379b5a4e",
                         "exec": [
                           "let randomcode  = Math.floor(Math.random() * 9999);\r",
                           "pm.environment.set(\"randomStockCode\",randomcode);"
                         ],
-                        "type": "text/javascript",
-                        "id": "0fa4f9a2-de15-418a-aa31-8c5d379b5a4e"
+                        "type": "text/javascript"
                       }
                     }
                   ],
@@ -5788,7 +5788,7 @@
                     "header": [],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\r\n  \"code\": \"random.{{randomStockCode}}\",\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"description\":\"{{$randomLoremSentences}}\",\r\n  \"stateData\":{\r\n      \"progress\":{\r\n          \"weight\":100,\r\n          \"current\":50\r\n      }\r\n  }\r\n}",
+                      "raw": "{\r\n  \"code\": \"random.{{randomStockCode}}\",\r\n  \"name\": \"{{$randomFullName}}\",\r\n  \"description\":\"{{$randomLoremSentences}}\",\r\n  \"stockAuthorityCode\":\"8790-581-1\",\r\n  \"stateData\":{\r\n      \"progress\":{\r\n          \"weight\":100,\r\n          \"current\":50\r\n      }\r\n  }\r\n}",
                       "options": {
                         "raw": {
                           "language": "json"
